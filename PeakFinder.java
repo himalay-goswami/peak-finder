@@ -3,21 +3,23 @@ package com.idot;
 public class PeakFinder {
     public static int peakFinder(int[] arr, int l){
         if(l==1){
-            System.out.println("array value is:" +arr[0]);
+            System.out.println("peak is:" +arr[0]);
             return 0;
         }
 
         if(arr[0]>arr[1]){
+            System.out.println("peak is:" +arr[0]);
             return 0;
         }
 
         else if (arr[l-1]>arr[l-2]){
+            System.out.println("peak is:" +arr[l-1]);
             return (l-1);
         }
 
         for (int i = 1; i < (l - 1); i++) {
             if ((arr[i] > arr[i+1]) && (arr[i]> arr[i-1])) {
-                System.out.println("peak value is:" +arr[i]);
+                System.out.println("peak is:" +arr[i]);
                 return (i);
             }
 
